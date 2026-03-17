@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { Analytics } from "@vercel/analytics/next"
 import { GraphCanvas } from './components/GraphCanvas';
 import { GraphSelector } from './components/GraphSelector';
 import { QueryPanel } from './components/QueryPanel';
@@ -127,6 +128,7 @@ function App() {
 
   return (
     <div className="flex h-screen w-screen bg-base overflow-hidden">
+      <Analytics />
       {/* Canvas area + bottom graph selector */}
       <div className="flex-1 flex flex-col min-w-0 min-h-0 relative">
         <div className="flex-1 min-h-0">
